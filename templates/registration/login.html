@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block body %}
+
+<section class="section pt-55 mb-50">
+    <div class="container">
+        <div class="sign widget ">
+            <div class="section-title">
+                <h5>ورود به حساب</h5>
+            </div>
+            <form  action="#" class="sign-form widget-form " method="post">
+                {% csrf_token %}
+                    <div class="form-group">
+                    {{ form.username }}
+                </div>
+                <div class="form-group">
+                    {{ form.password }}
+                </div>
+                <div class="sign-controls form-group">
+                    <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="rememberMe">
+                        <label class="custom-control-label" for="rememberMe">مرا بخاطر بسپار</label>
+                    </div>
+                    <a href="#" class="btn-link  ml-auto">رمز عبور خود را فراموش کرده اید؟</a>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-custom">ورود به حساب</button>
+                </div>
+                
+                <p class="form-group text-center">حساب کاربری ندارید؟ <a href="register.html" class="btn-link">ثبت نام کنید</a> </p>
+                
+            </form>
+        </div> 
+    </div>
+</section>        
+
+{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
