@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="fa">
 
@@ -10,20 +11,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- favicon -->
-    <link rel="icon" sizes="16x16" href="assets/img/favicon.png">
+    <link rel="icon" sizes="16x16" href='{% static "img/favicon.png" %}'> 
 
     <!-- Title -->
     <title>نانپوست - وبلاگ (مجله) شخصی</title>
         
     <!-- CSS Plugins -->
-    <link rel="stylesheet" href="assets/css/all.css">
-    <link rel="stylesheet" href="assets/css/elegant-font-icons.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href='{% static "css/all.css" %}'> 
+    <link rel="stylesheet" href='{% static "css/elegant-font-icons.css" %}'> 
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'> 
+    <link rel="stylesheet" href='{% static "css/owl.carousel.css" %}'> 
     
     <!-- main style -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href='{% static "css/style.css" %}'> 
+    <link rel="stylesheet" href='{% static "css/custom.css" %}'> 
 </head>
 
 <body class="rtl">
@@ -32,9 +33,9 @@
         <div class="container-fluid">
             <!--logo-->
             <div class="logo">
-                <a href="index.html">
-                    <img src="assets/img/logo-dark.png" alt="" class="logo-dark">
-                    <img src="assets/img/logo-white.png" alt="" class="logo-white">
+                <a href='{% static "index.html" %}'> 
+                    <img src='{% static "img/logo-dark.png" %}' alt="" class="logo-dark"> 
+                    <img src='{% static "img/logo-white.png" %}' alt="" class="logo-white"> 
                 </a>
             </div>
             <!--/-->
@@ -43,7 +44,7 @@
             <div class="collapse navbar-collapse" id="main_nav">
                 <ul class="navbar-nav ml-auto mr-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html" data-toggle="dropdown"> صفحه نخست </a>
+                        <a class="nav-link dropdown-toggle" href="index.html" data-toggle="dropdown"> صفحه نخست </a> 
                         <ul class="dropdown-menu fade-up">
                             <li>
                                 <a class="dropdown-item" href="index.html">صفحه نخست 1</a>
@@ -249,17 +250,17 @@
   
   
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="assets/js/jquery-3.5.0.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src='{% static "js/jquery-3.5.0.min.js" %}'></script> 
+    <script src='{% static "js/popper.min.js" %}'></script> 
+    <script src='{% static "js/bootstrap.min.js" %}'></script> 
     
     <!-- JS Plugins  -->
-    <script src="assets/js/ajax-contact.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/switch.js"></script>
+    <script src='{% static "js/ajax-contact.js" %}'></script> 
+    <script src='{% static "js/owl.carousel.min.js" %}'></script> 
+    <script src='{% static "js/switch.js" %}'></script> 
     
     <!-- JS main  -->
-    <script src="assets/js/main.js"></script>
+    <script src='{% static "js/main.js" %}'></script> 
 </body>
 
 
