@@ -104,30 +104,20 @@
                             </li>
                         </ul>
                     </li>
-    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">صفحات </a>
-                        <ul class="dropdown-menu fade-up">
-                            <li>
-                                <a class="dropdown-item" href="about.html"> درباره ما </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="author.html"> نویسنده </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="login.html"> ورود کاربران </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item " href="register.html"> ثبت نام </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item " href="page404.html"> 404 </a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html"> ارتباط با ما </a>
                     </li>
+                    <li class="nav-item">
+                        {% if request.user.is_authenticated %}
+                            <span >
+                                {{request.user.username}}
+                            </span> | 
+                               <a class="nav-link" href='{% url "logout" %}'>خروج</a>
+                            
+                        {% else %}
+                                <a class="nav-link " href='{% url "login" %}'>ثبت نام / ورود</a>
+                        {% endif %}
+                   </li>
                   
                 </ul>
             </div>

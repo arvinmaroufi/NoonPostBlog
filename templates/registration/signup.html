@@ -1,43 +1,46 @@
 {% extends "base.html" %}
 {% block body %}
+
 <section class="section pt-55 mb-50">
-    <div class="container-fluid">
-        <div class="sign widget">
+    <div class="container">
+        <div class="sign widget ">
             <div class="section-title">
                 <h5>ثبت نام</h5>
             </div>
-            
-            <form  class="sign-form widget-form contact_form " method="post">
+            <form  action="#" class="sign-form widget-form " method="post">
                 {% csrf_token %}
-                
-                <div class="form-group">
-                
-                {% comment %} <input type="text" class="form-control" placeholder="نام کاربری *" name="username" value=""> {% endcomment %}
-                {{ form.username }}
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="نام کاربری *" name="username" value="">
                 </div>
                 <div class="form-group">
-                
-                {% comment %} <input type="email" class="form-control" placeholder="آدرس ایمیل *" name="email" value=""> {% endcomment %}
-                {{form.email}}
+                    <input type="email" class="form-control" placeholder="آدرس ایمیل *" name="email" value="">
                 </div>
                 <div class="form-group">
-                
-                {% comment %} <input type="password" class="form-control" placeholder="رمز عبور *" name="password" value=""> {% endcomment %}
-                {{form.password1}} 
+                    <input type="password" class="form-control" placeholder="رمز عبور *" name="password" value="">
                 </div>
                 <div class="sign-controls form-group">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="rememberMe">
-                    <label class="custom-control-label" for="rememberMe">با تمامی <a href="#" class="btn-link">شرایط و ضوابط</a> موافقم. </label>
-                </div>
+                    
                 </div>
                 <div class="form-group">
-                <button type="submit" class="btn-custom">ثبت نام</button>
+                    <button type="submit" class="btn-custom">ورود به حساب</button>
                 </div>
-                <p class="form-group text-center">حساب کاربری دارید؟ <a href="login.html" class="btn-link">وارد شوید</a> </p>
+                
+                <p class="form-group text-center">حساب کاربری دارید؟ <a href="{% url "login" %}" class="btn-link">وارد شوید</a> </p>
+                
             </form>
-        </div>
+        </div> 
     </div>
-</section>
+</section>        
 
 {% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
