@@ -117,7 +117,7 @@
         </div>
     </nav>
     <!--/-->
-    {% block body %}{% endblock body %}
+    {% block context %}{% endblock context %}
     <!--newslettre-->
     <section class="newslettre">
         <div class="container-fluid">
@@ -126,10 +126,11 @@
                     <h5>عضویت در خبرنامه</h5>
                     <p> رایگان ثبت نام کنید و اولین نفری باشید که از پست های جدید مطلع می شوید. </p>
                 </div>
-                <form action="#" class="newslettre-form">
+                <form action="{% url "core:newsleter" %}" class="newslettre-form" method="POST">
+                    {% csrf_token %}
                     <div class="form-flex">
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="آدرس ایمیل" required="required">
+                            <input type="email" class="form-control" placeholder="آدرس ایمیل" required="required" name='email' id='email'>
                         </div>
                         <button class="submit-btn" type="submit">عضویت</button>
                     </div>
