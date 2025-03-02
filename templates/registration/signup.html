@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block context %}
+
+<section class="section pt-55 mb-50">
+    <div class="container">
+        <div class="sign widget ">
+            <div class="section-title">
+                <h5>ثبت نام</h5>
+            </div>
+            <form  action="#" class="sign-form widget-form " method="post">
+                {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="نام کاربری *" name="username" value="">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="آدرس ایمیل *" name="email" value="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="رمز عبور *" name="password" value="">
+                </div>
+                <div class="sign-controls form-group">
+                    
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-custom">ورود به حساب</button>
+                </div>
+                
+                <p class="form-group text-center">حساب کاربری دارید؟ <a href="{% url "login" %}" class="btn-link">وارد شوید</a> </p>
+                
+            </form>
+        </div> 
+    </div>
+</section>        
+
+{% endblock context %}
+
+
+
+
+
+
+
+
+
+
+
