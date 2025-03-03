@@ -54,7 +54,7 @@
                         <a class="nav-link" href="contact.html"> درباره ما </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html"> ارتباط با ما </a>
+                        <a class="nav-link" href="{% url "core:contact" %}"> ارتباط با ما </a>
                     </li>
                     <li class="nav-item">
                         {% if request.user.is_authenticated %}

@@ -13,3 +13,18 @@ class Newsleter(models.Model):
     def __str__(self):
         return self.email
     
+
+class ContactUs(models.Model):
+    full_name = models.CharField(max_length=100, verbose_name="نام کامل")
+    email = models.EmailField(verbose_name="ایمیل")
+    subject = models.CharField(max_length=100, verbose_name="موضوع")
+    message = models.TextField(verbose_name="پیام")
+    created = models.DateTimeField(auto_now_add=True,verbose_name="تاریخ ارسال")
+    
+    class Meta:
+        verbose_name="تماس با ما"
+        verbose_name_plural="تماس با ما"
+        
+    def __str__(self):
+        return self.full_name
+    
