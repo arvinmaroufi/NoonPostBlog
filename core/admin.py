@@ -6,3 +6,7 @@ from . import models
 @admin.register(models.Newsleter)
 class NewsleterAdmin(admin.ModelAdmin):
     list_display=['email','create']
+
+@admin.register(models.ContactUs)    
+class ContactUsAdmin(admin.ModelAdmin):
+    list_display = ['full_name','email','subject','created']
