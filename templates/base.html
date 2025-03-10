@@ -51,7 +51,7 @@
                         <a class="nav-link" href="contact.html"> مقالات </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html"> درباره ما </a>
+                        <a class="nav-link" href="{% url "core:about_us" %}"> درباره ما </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url "core:contact" %}"> ارتباط با ما </a>
@@ -137,22 +137,23 @@
                 </form>
                 <div class="social-icones">
                     <ul class="list-inline">
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-facebook-f"></i>فیسبوک</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-twitter"></i>توییتر </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-instagram"></i>اینستگرام </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-youtube"></i>یوتیوب</a>
-                        </li>
+                        {% if site_settings.facebook_link %}
+                            <li>
+                                <a href="{{site_settings.facebook_link}}">
+                                    <i class="fab fa-facebook-f"></i></a>
+                            </li>
+                        {% endif %}
+                        {% if site_settings.telegram_link %}
+                            <li>
+                                <a href="{{site_settings.telegram_link}}">
+                                    <i class="fab fa-telegram"></i></a>
+                            </li>
+                        {% endif %}
+                        {% if site_settings.instagram_link %}
+                            <li>
+                                <a href="{{site_settings.instagram_link}}"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -165,7 +166,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copyright">
-                        <p>کپی رایت © 2021. کلیه حقوق محفوظ است</p>
+                        <p>{{site_settings.copy_right}}</p>
                     </div>
                     <div class="back">
                         <a href="#" class="back-top">
